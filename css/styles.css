@@ -321,10 +321,7 @@ body{
     position: static;
 }
 
-/* Дополнительные стили для мобильного меню */
-.header__top.menu-open {
-    position: static;
-}
+/* Дополнительные стили для мобильного меню 
 
 /* Обеспечиваем видимость бургер кнопки при открытом меню */
 .header__mobile-menu.active ~ .header .header__right,
@@ -599,7 +596,7 @@ body{
 
 .program__card-title{
     font-family: var(--font-benzin);
-    font-size: 24px;
+    font-size: 18px;
     color: var(--color-white);
     font-weight: var(--font-weight-medium);
     line-height: 125%;
@@ -608,7 +605,7 @@ body{
     align-items: center;
     justify-content: space-between;
     gap: 24px;
-    padding: 48px;
+    padding: 32px;
     box-sizing: border-box;
 }
 
@@ -1880,5 +1877,12 @@ body{
     
     .autolayout_title {
         font-size: clamp(24px, 8vw, 40px);
+    }
+    .program__card.expanded .program__card-content{
+        padding: 24px;
+        padding-top: 0px;
+    }
+    .program__card-title{
+        padding: 24px;
     }
 }
