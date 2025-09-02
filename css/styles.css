@@ -244,10 +244,11 @@ body{
     color: var(--color-black);
     padding: 12px 24px;
     border-radius: 8px;
-    font-family: var(--font-space-grotesk);
-    font-weight: var(--font-weight-medium);
+    font-family: var(--font-benzin);
+    font-weight: var(--font-weight-bold);
     font-size: 16px;
     transition: var(--transition);
+    text-transform: uppercase;
 }
 
 
@@ -418,16 +419,20 @@ body{
     color: var(--color-black);
     padding: 16px 32px;
     border-radius: 8px;
-    font-family: var(--font-space-grotesk);
-    font-weight: var(--font-weight-medium);
+    font-family: var(--font-benzin);
+    font-weight: var(--font-weight-bold);
     font-size: 20px;
     transition: var(--transition);
 }
 
+.header__cta-text{
+    margin-top: 0px;
+}
 
 
 .header__bottom-cta__text{
     font-weight: var(--font-weight-bold);
+    margin-top: 3px;
 }
 
 .header__bottom-cta__icon{
@@ -795,7 +800,7 @@ body{
     color: var(--color-white);
     text-align: center;
     line-height: 130%;
-    max-width: 800px;
+    max-width: 440px;
     margin: 0 auto;
 }
 
@@ -844,6 +849,72 @@ body{
     flex-direction: column;
     gap: 20px;
     position: relative;
+    overflow: hidden;
+}
+
+/* Фоновые изображения для target-audience__card */
+.target-audience__card:nth-child(1)::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 200px;
+    background-image: url('../img/advantages-img-1.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+    opacity: 0.3;
+    border-radius: 0 24px 0 0;
+}
+
+.target-audience__card:nth-child(2)::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 200px;
+    background-image: url('../img/advantages-img2.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+    opacity: 0.3;
+    border-radius: 0 24px 0 0;
+}
+
+.target-audience__card:nth-child(3)::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 200px;
+    background-image: url('../img/advantages-img3.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+    opacity: 0.3;
+    border-radius: 0 24px 0 0;
+}
+
+.target-audience__card:nth-child(4)::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 200px;
+    background-image: url('../img/advantages-img4.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+    opacity: 0.3;
+    border-radius: 0 24px 0 0;
 }
 
 .target-audience__card-number {
@@ -883,24 +954,26 @@ body{
 /* FAQ Styles */
 .faq__title{
     font-family: var(--font-benzin);
-    font-size: clamp(38px, 8vw, 80px);
+    font-size: clamp(28px, 10vw, 48px);
     font-weight: bold;
     text-transform: uppercase;
     color: var(--color-white);
-    text-align: center;
+    text-align: left;
     margin-bottom: 64px;
 }
 
 .faq__items{
     display: flex;
     flex-direction: column;
-    gap: 24px;
 }
 
 .faq__item{
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 16px;
     overflow: hidden;
+    border-bottom: #383838 1px solid;
+}
+
+.faq__item:first-child {
+    border-top: #383838 1px solid;
 }
 
 .faq__header{
@@ -913,10 +986,11 @@ body{
 }
 
 .faq__question{
-    font-family: var(--font-space-grotesk);
+    font-family: var(--font-benzin);
     font-size: 18px;
     color: var(--color-white);
     max-width: 80%;
+    font-weight: var(--font-weight-medium);
 }
 
 .faq__arrow{
@@ -1462,11 +1536,11 @@ body{
 .autolayout_title{
     font-family: var(--font-benzin);
     font-size: 48px;
-    font-weight: var(--font-weight-regular);
+    font-weight: var(--font-weight-bold);
     line-height: 120%;
     color: var(--color-white);
     text-align: left;
-    max-width: 670px;
+    max-width: 690px;
     text-transform: uppercase;
 }
 
@@ -1500,7 +1574,7 @@ body{
     padding: 48px;
     gap: 32px;
     width: 670px;
-    height: auto;
+    height: fit-content;
     background: rgba(240, 240, 240, 0.07);
     background-blend-mode: plus-lighter;
     box-shadow: inset 2px 2.00046px 9px rgba(255, 255, 255, 0.12), inset 1px 1px 4px rgba(255, 255, 255, 0.12);
@@ -1558,6 +1632,23 @@ body{
     border-color: #ff4757 !important;
     animation: shake 0.5s ease-in-out;
     transition: border-color 0.3s ease;
+}
+
+.contact__checkbox-label.error .contact__checkbox-custom{
+    border-color: #ff4757 !important;
+    animation: shake 0.5s ease-in-out;
+}
+
+.contact__form-error{
+    color: #ff4444;
+    font-size: 14px;
+    text-align: center;
+    font-family: var(--font-space-grotesk);
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+    right: 0;
+    z-index: 10;
 }
 
 @keyframes shake {
@@ -1652,7 +1743,7 @@ body{
 .contact{
     display: flex;
     justify-content: space-between;
-    align-items: center;    
+    align-items: flex-start;    
     gap: 24px;
 }
 
@@ -1738,7 +1829,7 @@ body{
     .autolayout_title {
         font-family: var(--font-benzin);
         font-size: 32px;
-        font-weight: var(--font-weight-regular);
+        font-weight: var(--font-weight-bold);
         line-height: 120%;
         color: var(--color-white);
         text-align: left;
@@ -1895,6 +1986,7 @@ body{
     
     .faq__title {
         font-size: clamp(28px, 10vw, 48px);
+        text-align: center;
     }
     
     .contact__form-title {
