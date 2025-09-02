@@ -75,6 +75,13 @@ html{
     scroll-padding-top: 96px; /* Отступ при скролле к якорям для компенсации навбара */
 }
 
+/* Safari viewport fix */
+@supports (height: 100dvh) {
+    .header {
+        min-height: 100dvh;
+    }
+}
+
 body{
     overflow-x: hidden;
     min-height: 100vh;
